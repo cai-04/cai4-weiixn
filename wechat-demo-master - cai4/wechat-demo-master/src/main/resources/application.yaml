@@ -1,0 +1,59 @@
+server:
+  servlet:
+    context-path: /wechat/demo
+  port: 8081
+
+wechat:
+  config:
+    #微信appId
+    appId: wx1a4bfd40c911b957
+    #微信appSecret
+    appSecret: 878cba9dc862b6817fb5301c63e24552
+    #token: 填写微信token
+    #配置一个文字的模板ID
+    singleTemplateId: Jj4cbQcyOyRh_HvWWvVNxiMo4JxRo1Sl9fMEVPhVhsA
+    template:
+      #早安模板
+      morningTemplate:
+        #模板ID
+        templateId: aIIWnbergmYVB63cj0h3rIGIBiGTHKlGFZWZ6aeLp8s
+        #是否关注的用户全发送，ture为是，当值为ture时，sendOpenId 为排除发送对象的微信用户，当值为false为否，sendOpenId为发送对象的微信用户
+        allSend: false
+        filterOpenIds: oLt746W-8zsHT1jXC1OaNupbc4yc
+#          - oK0U562Y5ijqYRpGUtNRs0vxxxWU
+        parameter:
+          #这是默认的设置，如果有用户没设置参数，就按此参数
+          default:
+            #早安话语
+            title: 早上好呀
+            #你们的相遇时间
+            meetDate: '2001-04-01'
+            city: 吕梁市柳林县
+            #居住地点，高德地图api下载查询 https://lbs.amap.com/api/webservice/download
+            cityCode: 141125
+            constellation: 白羊座
+          #用户openID，多用户可以按照格式继续添加下去
+          #填写你的需要特定配置的微信用户号:
+           # title: 早上好呀呀鸭
+            #meetDate: '2021-08-11'
+            #city: 肇庆
+            #cityCode: 440600
+            #constellation: 狮子座
+      #颜文字模板
+      emoticonsTemplate:
+        templateId: Jj4cbQcyOyRh_HvWWvVNxiMo4JxRo1Sl9fMEVPhVhsA
+        allSend: true
+        filterOpenIds: oLt746W-8zsHT1jXC1OaNupbc4yc
+        parameter:
+          default:
+            title: 1
+#发送者个人信息
+personal:
+  info:
+    constellation: 白羊座
+
+lbs:
+  key: 5662963e396bbe5184d4f9f7a81acf9a
+
+constellation:
+  key: 2b2c52d92af0fc47deb7bf5cd6a65d1b
